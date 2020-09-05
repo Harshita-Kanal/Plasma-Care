@@ -16,26 +16,26 @@
  <nav>
     <div class="nav-wrapper  red darken-4 "> 
 
-      <a href="" class="brand-logo">Plasma Care</a>
+      <a href="{% url 'home' %}" class="brand-logo">Plasma Care</a>
 
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href= "" >About</a></li>
-        <li><a href = "">Patient</a></li>
-        <li><a href="">Citizen</a></li>
-        <li><a href="">Volunteer</a></li>
-        <li><a href="">FAQs</a></li>
+        <li><a href= "{% url 'about' %}" >About</a></li>
+        <li><a href = "{% url 'patient' %}">Patient</a></li>
+        <li><a href="{% url 'donor' %}">Donor</a></li>
+        <li><a href="{% url 'citizen' %}">Volunteer</a></li>
+        <li><a href="{% url 'faq' %}">FAQs</a></li>
       </ul>
     </div>
   </nav>
  
 
   <ul class="sidenav red darken-4 " id="mobile-demo">
-    <li><a href="">About</a></li>
-    <li ><a href="">Patient</a></li>
-    <li ><a href="">Citizen</a></li>
-    <li><a href="">Volunteer</a></li>
-    <li><a href="">FAQs</a></li>
+    <li><a href="{% url 'about' %}">About</a></li>
+    <li ><a href="{% url 'patient' %}">Patient</a></li>
+    <li ><a href="{% url 'donor' %}">Donor</a></li>
+    <li><a href="{% url 'citizen' %}">Volunteer</a></li>
+    <li><a href="{% url 'faq' %}">FAQs</a></li>
   </ul> 
 
   {% block content %} 
