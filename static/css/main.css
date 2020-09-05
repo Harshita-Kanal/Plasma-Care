@@ -1,0 +1,42 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+ul{
+    color: white;
+}
+
+.brand-logo{
+    margin-left: 20px;
+}
+
+.item{
+    margin-right: 30px;
+}
+
+.align-img {
+    text-align: center;
+}
+
+.align{
+    margin-right: 40px;
+}
+
+.top-button{
+    margin-top: 40px;
+}
+
+main{
+    flex: 1 0 auto;
+}
+
+h1{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
