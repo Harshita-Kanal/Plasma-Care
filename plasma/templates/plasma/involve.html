@@ -1,0 +1,26 @@
+ {% extends 'plasma/main.html' %} 
+ {% load static %} 
+
+{% block content %}
+ <link rel = "stylesheet" href = "{% static '/css/involve.css' %}">
+<div class = "container">
+<h1>Get Involved</h1> 
+     <h5>Register as a Volunteer</h5>
+    <hr>
+    <div class = "card">
+    <div class = "formItem">
+         <form action = "" method = "post"> 
+         {% csrf_token %}
+            {{form}}
+            <div class = "buttonItem">
+                <button class="waves-effect waves-light btn-large red accent-2 align"> <i class="material-icons left">face</i> Submit</button>
+             </div>      
+          </form> 
+    </div> 
+    <div>
+</div>
+
+
+
+
+{% endblock content %}

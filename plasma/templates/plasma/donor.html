@@ -2,7 +2,24 @@
  {% load static %} 
 
 {% block content %}
+
+<script>     
+    $(document).ready(function(){
+        $('select').formSelect();
+      });
+    $(document).ready(function(){
+        $('.datepicker').datepicker();
+      });
+    $(document).ready(function() {
+    M.updateTextFields();
+      });
+  </script>
   <link rel = "stylesheet" href = "{% static '/css/donor.css' %}">
+  <style>
+    .card{
+      padding: 20px;
+    }
+  </style>
 <div class = "container">
 <h3>Register as a Donor</h3>
 <div class = "card">
@@ -22,6 +39,20 @@ All information provided will be kept confidential and will only be used to qual
 Documentation of a positive test is required to donate. Positive test can be a nasopharyngeal swab or blood antibody test for COVID-19. <br>
 Documentation must include your full name, testing facility or physician, and date of test. <br>
 When presenting to donate, donors are asked to bring a face mask or face covering <br>
+</div>
+</div>
+
+<div class = "card">
+<div>
+<form action = "" method = "post"> 
+{% csrf_token %}
+  {{form}}
+    <div class = "buttonItem">
+          <button class="waves-effect waves-light btn-large red accent-2 align"> <i class="material-icons left">face</i> Submit</button>
+    </div>
+    <br/>
+    *please enter date in yyyy-mm-dd format
+</form>
 </div>
 </div>
 </div>

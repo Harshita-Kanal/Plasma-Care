@@ -2,8 +2,19 @@
  {% load static %} 
 
 {% block content %}
-<h1>Find a Donor</h1>
-
-
-
+<link rel = "stylesheet" href = "{% static '/css/patient.css' %}">
+<div class = "container">
+    <h1>Find a Donor</h1>
+ <h5>Available Donors </h5>
+    <hr>
+    {% for donor in donors %}
+    <div class = "card">
+        <div class = "render">
+           <h5 class = "red darken-4 head"> {{donor.name}} </h5>
+           <p> {{donor.location}} </p>       
+           <p><i class="material-icons">call</i> {{donor.phone}} &nbsp; <i class="material-icons">email</i> {{donor.email}} &nbsp; <i class="material-icons">favorite</i>blood group {{donor.bloodgroup}} </p>
+        </div>       
+    </div>
+    {% endfor %}
+</div>
 {% endblock content %}

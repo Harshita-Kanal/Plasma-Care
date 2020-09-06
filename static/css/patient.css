@@ -1,0 +1,16 @@
+.render{
+    padding: 20px;
+    text-align: center;
+    font-size: large;
+}
+
+.head{
+    color: white;
+    margin: 0px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.formItem{
+    padding: 40px;
+}
