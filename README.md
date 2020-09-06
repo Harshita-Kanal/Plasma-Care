@@ -16,6 +16,8 @@ The citizens could register as volunteers and make themselves available to provi
 
 There is also an about and FAQ page, which helps in spreading awareness about plasma donation.
 
+<img src = "images/Capture.JPG" />
+
 ### *__Running the Project__* :running:
 
 * Install Python
