@@ -21,7 +21,7 @@
       <a href="" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href= "{% url 'about' %}" >About</a></li>
-        <li><a href = "{% url 'patient' %}">Patient</a></li>
+        <li><a href = "{% url 'patient' %}">Find</a></li>
         <li><a href="{% url 'donor' %}">Donor</a></li>
         <li><a href="{% url 'citizen' %}">Volunteer</a></li>
         <li><a href="{% url 'faq' %}">FAQs</a></li>
@@ -32,7 +32,7 @@
 
   <ul class="sidenav red darken-4 " id="mobile-demo">
     <li><a href="{% url 'about' %}">About</a></li>
-    <li ><a href="{% url 'patient' %}">Patient</a></li>
+    <li ><a href="{% url 'patient' %}">Find</a></li>
     <li ><a href="{% url 'donor' %}">Donor</a></li>
     <li><a href="{% url 'citizen' %}">Volunteer</a></li>
     <li><a href="{% url 'faq' %}">FAQs</a></li>
@@ -41,8 +41,8 @@
   {% block content %} 
 <div class = "container">
    <h1> Plasma Care </h1>
-   <div class = "align-img">
-    <img class="responsive-img" height = "300px" width = "300px" src="{% static 'images/intro.png' %}"> <br/>
+   <div class = "align-img"> 
+  <img class="responsive-img" height = "300px" width = "300px" src="{% static 'images/intro.png' %}"> <br/>
     <div class = "top-button">
          <a class="waves-effect waves-light btn-large red accent-2 align"><i class="material-icons left">face</i>Donors</a>
          <a class="waves-effect waves-light red accent-2 btn-large"><i class="material-icons right">face</i>Citizens</a>
@@ -50,9 +50,6 @@
    
    </div>
   
-
-
-
 </div>
 
   {% endblock content %}

@@ -2,7 +2,37 @@
  {% load static %} 
 
 {% block content %}
-<h1>Citizen</h1>
+ <link rel = "stylesheet" href = "{% static '/css/citizen.css' %}">
+<div class = "container">
+    <h1>Citizens</h1>
+  <div class = "align-img">
+     <img class="responsive-img" height = "300px" width = "300px" src="{% static 'images/volunteer.png' %}"> 
+  </div>
+    <h5> Meet our volunteers </h5>
+    <hr>
+    {% for volunteer in volunteer %}
+    <div class = "card">
+        <div class = "render">
+           <h5 class = "red darken-4 head"> {{volunteer.name}} </h5>
+           <p> {{volunteer.description}} </p>       
+           <p><i class="material-icons">call</i> {{volunteer.phone}} &nbsp; <i class="material-icons">email</i> {{volunteer.email}} </p>
+        </div>       
+    </div>
+    {% endfor %}
+<br>
+ <h5>Register as a Volunteer</h5>
+    <hr>
+    <div class = "card">
+    <div class = "formItem">
 
+         <form action = "" method = "post"> 
+         {% csrf_token %}
+            {{form}}
+                <button class="waves-effect waves-light btn-large red accent-2 align"> <i class="material-icons left">face</i> Submit</button>
+          </form> 
+    </div> 
+    <div>
+
+</div>
 
 {% endblock content %}

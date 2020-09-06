@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from . models import *
+from .forms import VolunteerForm
+from django.http import HttpResponseRedirect
 def home(request):
     return render(request, 'plasma/main.html')
 
@@ -20,5 +23,13 @@ def about(request):
 
 
 def citizen(request):
-    return render(request, 'plasma/citizen.html')
+    form = VolunteerForm()
+    volunteer = Volunteer.objects.all()
+    if request.method == 'POST':
+        form = VolunteerForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form = VolunteerForm()
+    return render(request, 'plasma/citizen.html', {'volunteer': volunteer, 'form': form})
+
 # Create your views here.
